@@ -24,17 +24,14 @@
 
         gtag('config', 'G-867GHGXSRN');
     </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9826406138434991" crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="https://assets.vnvn.fun/css/base.css">
-        <link rel="stylesheet" href="https://assets.vnvn.fun/css/nav.css">
-        <link rel="stylesheet" href="https://assets.vnvn.fun/css/container.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+
         <link rel="stylesheet" href="https://assets.vnvn.fun/css/layout.css">
-        <link rel="stylesheet" href="https://assets.vnvn.fun/css/sidebar.css">
-        <link rel="stylesheet" href="https://assets.vnvn.fun/css/header.css">
-        <link rel="stylesheet" href="https://assets.vnvn.fun/css/main.css">
-        <link rel="stylesheet" href="https://assets.vnvn.fun/css/section.css">
-        <link rel="stylesheet" href="https://assets.vnvn.fun/css/card.css">
-        <link rel="stylesheet" href="https://assets.vnvn.fun/css/footer.css">
+
+    <link rel="stylesheet" href="https://assets.vnvn.fun/css/index.css">
 </head>
 <body>
     <nav class="nav">
@@ -53,6 +50,12 @@
                     <li>
                         <a class="nav__link nav__link--active" href="https://ru.vnvn.fun">RU</a>
                     </li>
+                    <li>
+                        <a class="nav__link nav__link--active" href="https://uk.vnvn.fun">UK</a>
+                    </li>
+                    <li>
+                        <a class="nav__link nav__link--active" href="https://hu.vnvn.fun">HU</a>
+                    </li>
             </ul>
         </div>
     </nav>
@@ -68,7 +71,7 @@
     <div class="main__wrapper">
         <nav class="section">
             <div class="section__title"><div class="section__emoji">🕵</div><h2>Категория</h2></div>
-            <ul class="section__categories">
+            <ul class="section__categories" x-data="{ more: false }">
                     <li>
                         <a class="section__category" href="https://ru.vnvn.fun/ekshn-igry">Экшн-игры</a>
                     </li>
@@ -84,274 +87,520 @@
                     <li>
                         <a class="section__category" href="https://ru.vnvn.fun/igry-na-lovkost">Игры на ловкость</a>
                     </li>
+                    <li>
+                        <a class="section__category" href="https://ru.vnvn.fun/podklyuchenie-igr">Подключение игр</a>
+                    </li>
+                    <li>
+                        <a class="section__category" href="https://ru.vnvn.fun/igry-s-pereodevaniem">Игры с переодеванием</a>
+                    </li>
+                    <li>
+                        <a class="section__category" href="https://ru.vnvn.fun/razvivayushie-igry">Развивающие игры</a>
+                    </li>
+                    <li>
+                        <a class="section__category" href="https://ru.vnvn.fun/nastol-nye-i-kartochnye-igry">Настольные и карточные игры</a>
+                    </li>
+                    <li>
+                        <a class="section__category" href="https://ru.vnvn.fun/igry-viktoriny">Игры-викторины</a>
+                    </li>
+
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/platformennye-igry">Платформенные игры</a>
+                    </li>
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/tajm-menedzhment">Тайм-менеджмент</a>
+                    </li>
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/madzhong-igry">Маджонг игры</a>
+                    </li>
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/kazino-igry">Казино игры</a>
+                    </li>
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/igry-s-zhivotnymi">Игры с животными</a>
+                    </li>
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/priklyuchencheskie-igry">Приключенческие игры</a>
+                    </li>
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/kulinarnye-igry">Кулинарные игры</a>
+                    </li>
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/arkadnye-igry">Аркадные игры</a>
+                    </li>
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/strelyalki-po-puzyryam">Стрелялки по пузырям</a>
+                    </li>
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/strelyalki">Стрелялки</a>
+                    </li>
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/igry-v-zhanre-tower-defense">Игры в жанре Tower Defense</a>
+                    </li>
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/pocelui-igry">поцелуи игры</a>
+                    </li>
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/muzhskie-igry">Мужские игры</a>
+                    </li>
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/zhenskie-igry">Женские игры</a>
+                    </li>
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/igry-dlya-mal-chikov">Игры для мальчиков</a>
+                    </li>
+                    <li class="hidden" :class="more ? 'off' : ''">
+                        <a class="section__category" href="https://ru.vnvn.fun/igry-dlya-devochek">Игры для девочек</a>
+                    </li>
+
+                <li>
+                    <button class="section__category section__category--button" @click="more = !more">
+                        <span x-show="!more">Более</span>
+                        <span class="hidden" :class="more ? 'off' : ''">Меньше</span>
+                    </button>
+                </li>
             </ul>
         </nav>
         <main>
-            <section class="section">
-                <div class="section__title"><div class="section__emoji">🔫</div><h2>Экшн-игры</h2></div>
-                <div class="section__body">
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/ekshn-igry/birdy-rush">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Birdy rush" src="https://assets.vnvn.fun/images/x109oyc3m723b2vsjhxyn5uxa3o8kqy9.webp">
-                            </div>
-                            <div class="card__title">Birdy rush</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/ekshn-igry/tower-boxer">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Tower Boxer" src="https://assets.vnvn.fun/images/s2f6k8glmgab52l2k6w987voaysvfroe.webp">
-                            </div>
-                            <div class="card__title">Tower Boxer</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/ekshn-igry/police-escape">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Police Escape" src="https://assets.vnvn.fun/images/bq70z1o91992u58hbruxl42jl9r7jr7e.webp">
-                            </div>
-                            <div class="card__title">Police Escape</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/ekshn-igry/cold-station">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Cold Station" src="https://assets.vnvn.fun/images/o4n3gs115i6rjqrngoicnqnc6fvg733w.webp">
-                            </div>
-                            <div class="card__title">Cold Station</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/ekshn-igry/death-chamber">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Death Chamber" src="https://assets.vnvn.fun/images/hdjaglz205ouxyqjtr5bsh6kxznbkmag.webp">
-                            </div>
-                            <div class="card__title">Death Chamber</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/ekshn-igry/star-battles">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Star Battles" src="https://assets.vnvn.fun/images/lx3fa32erh8maguu6h3uajm76x3mzye4.webp">
-                            </div>
-                            <div class="card__title">Star Battles</div>
-                        </a>
-                    </article>
-                </div>
-            </section>
-            <section class="section">
-                <div class="section__title"><div class="section__emoji">🛣️</div><h2>Гоночные игры</h2></div>
-                <div class="section__body">
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/gonochnye-igry/car-rush">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Car Rush" src="https://assets.vnvn.fun/images/3chvicaef9bohmckgvuuy4uz4wzo4vie.webp">
-                            </div>
-                            <div class="card__title">Car Rush</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/gonochnye-igry/two-cars">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Two cars" src="https://assets.vnvn.fun/images/73gkvr8p7tuufza4sqlbspsiwfa4vzr1.webp">
-                            </div>
-                            <div class="card__title">Two cars</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/gonochnye-igry/street-driver">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Street driver" src="https://assets.vnvn.fun/images/psefqs0b32k5ai145iage18ipxqn9hz7.webp">
-                            </div>
-                            <div class="card__title">Street driver</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/gonochnye-igry/drag-racing-club">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Drag Racing Club" src="https://assets.vnvn.fun/images/19z5428rulr2kpo1h9box13inctb6ylc.webp">
-                            </div>
-                            <div class="card__title">Drag Racing Club</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/gonochnye-igry/road-fury">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Road Fury" src="https://assets.vnvn.fun/images/se25pj8c34mkrm8zhau8akb3hh8iete1.webp">
-                            </div>
-                            <div class="card__title">Road Fury</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/gonochnye-igry/stud-rider">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Stud Rider" src="https://assets.vnvn.fun/images/7by7xj3qbfk2xvtwsxs7ibg2lc0ymblk.webp">
-                            </div>
-                            <div class="card__title">Stud Rider</div>
-                        </a>
-                    </article>
-                </div>
-            </section>
-            <section class="section">
-                <div class="section__title"><div class="section__emoji">🤯</div><h2>Стратегические игры</h2></div>
-                <div class="section__body">
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/strategicheskie-igry/mk48-io">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Mk48.io" src="https://assets.vnvn.fun/images/r63apz68ypw0kwcrocppqhbt4zcgcoe8.webp">
-                            </div>
-                            <div class="card__title">Mk48.io</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/strategicheskie-igry/domino-battle">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Domino Battle" src="https://assets.vnvn.fun/images/zueo6ral10k1gk6tviw4rdnwrwkbmovt.webp">
-                            </div>
-                            <div class="card__title">Domino Battle</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/strategicheskie-igry/connector">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Connector" src="https://assets.vnvn.fun/images/nqmliekymtufwr0vqloswqxvelwld8l6.webp">
-                            </div>
-                            <div class="card__title">Connector</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/strategicheskie-igry/2048-legend">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="2048 Legend" src="https://assets.vnvn.fun/images/f8qi5ymjf8bw35ww16yie55sulrdwc1m.webp">
-                            </div>
-                            <div class="card__title">2048 Legend</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/strategicheskie-igry/checkers-legend">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Checkers Legend" src="https://assets.vnvn.fun/images/inkje05y3a4lg5bxz9cx3lg8ura7tsmb.webp">
-                            </div>
-                            <div class="card__title">Checkers Legend</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/strategicheskie-igry/chess">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Chess" src="https://assets.vnvn.fun/images/vuqh29d56dlx2yqzzcjbyscgr0g4kee2.webp">
-                            </div>
-                            <div class="card__title">Chess</div>
-                        </a>
-                    </article>
-                </div>
-            </section>
-            <section class="section">
-                <div class="section__title"><div class="section__emoji">⚽</div><h2>Спортивные игры</h2></div>
-                <div class="section__body">
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/sportivnye-igry/crazy-baskets">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Crazy Baskets" src="https://assets.vnvn.fun/images/qxu25kblo0yib2z9a4n17a2zidmn6ivp.webp">
-                            </div>
-                            <div class="card__title">Crazy Baskets</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/sportivnye-igry/tennis-open-2021">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Tennis Open 2021" src="https://assets.vnvn.fun/images/652pcrrqnrcbdj8n79hh9j3zg7dx9h39.webp">
-                            </div>
-                            <div class="card__title">Tennis Open 2021</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/sportivnye-igry/boxing-stars">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Boxing Stars" src="https://assets.vnvn.fun/images/fcgs45eka94o9o2apuuz81gjf7l1l9hn.webp">
-                            </div>
-                            <div class="card__title">Boxing Stars</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/sportivnye-igry/cpl-tournament-2020">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="CPL Tournament 2020" src="https://assets.vnvn.fun/images/5t3dvhz8v1dqt2gscm07jwwk8mbs1bjo.webp">
-                            </div>
-                            <div class="card__title">CPL Tournament 2020</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/sportivnye-igry/cricket-hero">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Cricket Hero" src="https://assets.vnvn.fun/images/57qf0wy01u2c77nnz3kdoou5p4i81fqg.webp">
-                            </div>
-                            <div class="card__title">Cricket Hero</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/sportivnye-igry/football-heads">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Football Heads" src="https://assets.vnvn.fun/images/swqrgrfbsxs8c7n9nrk7pxb2s5lpe9uo.webp">
-                            </div>
-                            <div class="card__title">Football Heads</div>
-                        </a>
-                    </article>
-                </div>
-            </section>
-            <section class="section">
-                <div class="section__title"><div class="section__emoji">🤹</div><h2>Игры на ловкость</h2></div>
-                <div class="section__body">
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/igry-na-lovkost/pool-mania">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Pool Mania" src="https://assets.vnvn.fun/images/ycezoxbdjpxvtbgxqhhrmwn0m9owepne.webp">
-                            </div>
-                            <div class="card__title">Pool Mania</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/igry-na-lovkost/emoji-game">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Emoji Game" src="https://assets.vnvn.fun/images/2zvofd6p0e7xas9kwb2y71ovp41r1i0b.webp">
-                            </div>
-                            <div class="card__title">Emoji Game</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/igry-na-lovkost/birds-vs-blocks">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Birds VS Blocks" src="https://assets.vnvn.fun/images/mpccopijoz6unehmo27yvkuxhs35r7yj.webp">
-                            </div>
-                            <div class="card__title">Birds VS Blocks</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/igry-na-lovkost/climb-hero">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Climb Hero" src="https://assets.vnvn.fun/images/9ximab2a7g3zt0r81rq2ij0mewiqa1n2.webp">
-                            </div>
-                            <div class="card__title">Climb Hero</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/igry-na-lovkost/puzzle-pieces">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Puzzle Pieces" src="https://assets.vnvn.fun/images/4xzoooqwe796f8r6h0jerbo0wmedfh27.webp">
-                            </div>
-                            <div class="card__title">Puzzle Pieces</div>
-                        </a>
-                    </article>
-                    <article>
-                        <a class="card" href="https://ru.vnvn.fun/igry-na-lovkost/dangerous-danny">
-                            <div class="card__img-wrapper">
-                                <img class="card__img" alt="Dangerous Danny" src="https://assets.vnvn.fun/images/vv8kelfed0msjydy94rfm4yvevfoqbcx.webp">
-                            </div>
-                            <div class="card__title">Dangerous Danny</div>
-                        </a>
-                    </article>
-                </div>
-            </section>
+
+                <section class="section">
+                    <div class="section__title"><div class="section__emoji">🔫</div><h2>Экшн-игры</h2></div>
+                    <div class="section__body">
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/balcony-diving">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Balcony Diving" src="https://assets.vnvn.fun/images/AQ3ZrqwEwok8C9uz7C1QfAZxOYshIZBw.webp">
+                                </div>
+                                <div class="card__title">Balcony Diving</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/titan&#x27;s-tower">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Titan&#x27;s Tower" src="https://assets.vnvn.fun/images/0isFtyvbX3swIrWzs009TmbDzug6vujr.webp">
+                                </div>
+                                <div class="card__title">Titan&#x27;s Tower</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/color-bounce">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Color Bounce" src="https://assets.vnvn.fun/images/TA40bxw1DKB2EdfUGlb1o7OeQbxAe6IU.webp">
+                                </div>
+                                <div class="card__title">Color Bounce</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/doodle-jump">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Doodle Jump" src="https://assets.vnvn.fun/images/i0eYtacDAf4CQA9MapwMeqAW7P4X9OvM.webp">
+                                </div>
+                                <div class="card__title">Doodle Jump</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/king-soldiers-4">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="King Soldiers 4" src="https://assets.vnvn.fun/images/jm9gzA663eMKLsgzeMuIQOShQDhXcSou.webp">
+                                </div>
+                                <div class="card__title">King Soldiers 4</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/ninja-boy-2">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Ninja Boy 2" src="https://assets.vnvn.fun/images/8yPkT0cgUXA1Ra9X1mWkRvCRBcRvVlfn.webp">
+                                </div>
+                                <div class="card__title">Ninja Boy 2</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/king-soldiers-3">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="King Soldiers 3" src="https://assets.vnvn.fun/images/oa59OXBRqyDEirWfa9U7bgvFGBfqIB7P.webp">
+                                </div>
+                                <div class="card__title">King Soldiers 3</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/king-soldiers-2">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="King Soldiers 2" src="https://assets.vnvn.fun/images/S24ySCNe4KV2LvOglbnbYQja41z4Ce7c.webp">
+                                </div>
+                                <div class="card__title">King Soldiers 2</div>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section__title"><div class="section__emoji">🛣️</div><h2>Гоночные игры</h2></div>
+                    <div class="section__body">
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/4-directions">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="4 Directions" src="https://assets.vnvn.fun/images/AZO3bTts8P73bd1CmJTWRTK8tSORRabl.webp">
+                                </div>
+                                <div class="card__title">4 Directions</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/paper-survive">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Paper Survive" src="https://assets.vnvn.fun/images/YGMxyY3ZKTCSBk1fUK8Kg8zvKirHtTs0.webp">
+                                </div>
+                                <div class="card__title">Paper Survive</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/sky-battle">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Sky Battle" src="https://assets.vnvn.fun/images/fgWnkwzx5g3qyf5UXwXarmQcVQZ1GQ2m.webp">
+                                </div>
+                                <div class="card__title">Sky Battle</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/furious-laps">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Furious Laps" src="https://assets.vnvn.fun/images/JwO63vVHFnpCJiKRgsnNEGfM7AAf59WN.webp">
+                                </div>
+                                <div class="card__title">Furious Laps</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/big-monsters">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Big Monsters" src="https://assets.vnvn.fun/images/jkroQpUmAo99UVlQ6QXcLtDvezrDYpQh.webp">
+                                </div>
+                                <div class="card__title">Big Monsters</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/speed-boat">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Speed Boat" src="https://assets.vnvn.fun/images/yh52s874NbtkHjyhWTv07RY9nzRosPwE.webp">
+                                </div>
+                                <div class="card__title">Speed Boat</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/rival-rush">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Rival Rush" src="https://assets.vnvn.fun/images/DZWCUZ3Amcddu51yHpayQHEvZF1z1eiy.webp">
+                                </div>
+                                <div class="card__title">Rival Rush</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/two-cars">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Two cars" src="https://assets.vnvn.fun/images/5YYwLm9921Yt8nnw6bkGY8VcGWZauxu1.webp">
+                                </div>
+                                <div class="card__title">Two cars</div>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section__title"><div class="section__emoji">🤯</div><h2>Стратегические игры</h2></div>
+                    <div class="section__body">
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/elemental-magic-puzzle">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Elemental Magic Puzzle" src="https://assets.vnvn.fun/images/A9K7RXwyVF1cVnsIdqSvOMEWBG18wyRk.webp">
+                                </div>
+                                <div class="card__title">Elemental Magic Puzzle</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/tetroid-3">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Tetroid 3" src="https://assets.vnvn.fun/images/r3WpjUZaFiUKRc7rrD3oAqsNgRfgLt9w.webp">
+                                </div>
+                                <div class="card__title">Tetroid 3</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/catch-the-candy">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Catch the Candy" src="https://assets.vnvn.fun/images/YTo0BeQGSmO3Vpn2SX9m1DrFJ8qBkT9t.webp">
+                                </div>
+                                <div class="card__title">Catch the Candy</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/plan99">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Plan99" src="https://assets.vnvn.fun/images/Rn93q3wKA9nZKHvYb69MDCbWP9aAT9lC.webp">
+                                </div>
+                                <div class="card__title">Plan99</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/santa&#x27;s-warehouse">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Santa’s Warehouse" src="https://assets.vnvn.fun/images/56omS8VEyCErki8brCdpEQtFA4HEfvmV.webp">
+                                </div>
+                                <div class="card__title">Santa’s Warehouse</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/sweet-baby">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Sweet Baby" src="https://assets.vnvn.fun/images/1iu4ug4WUbItF88iGWEh90WgVnrKZaOQ.webp">
+                                </div>
+                                <div class="card__title">Sweet Baby</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/particolo">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Particolo" src="https://assets.vnvn.fun/images/8XNnlTWlcsDnAkznmgcyKhsMgwyxpsg9.webp">
+                                </div>
+                                <div class="card__title">Particolo</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/cargo-challenge-sokoban">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Cargo Challenge Sokoban" src="https://assets.vnvn.fun/images/IIig8qpsjIZucQo8AJ6OJfR5O6OtglCA.webp">
+                                </div>
+                                <div class="card__title">Cargo Challenge Sokoban</div>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section__title"><div class="section__emoji">⚽</div><h2>Спортивные игры</h2></div>
+                    <div class="section__body">
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/perfect-fall">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Perfect Fall" src="https://assets.vnvn.fun/images/iyF7tf0sBcEVrAcgSEcweTU3sPz2qzun.webp">
+                                </div>
+                                <div class="card__title">Perfect Fall</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/fishing-day">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Fishing Day" src="https://assets.vnvn.fun/images/JE3bERkf54lzL52JwfOs20cnvlYbnJIk.webp">
+                                </div>
+                                <div class="card__title">Fishing Day</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/furious-laps">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Furious Laps" src="https://assets.vnvn.fun/images/JwO63vVHFnpCJiKRgsnNEGfM7AAf59WN.webp">
+                                </div>
+                                <div class="card__title">Furious Laps</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/zball-football">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Zball Football" src="https://assets.vnvn.fun/images/SpJtu383XvbjBSnuH68dB1OMt4dUudiO.webp">
+                                </div>
+                                <div class="card__title">Zball Football</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/kick-cup">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Kick Cup" src="https://assets.vnvn.fun/images/ez2yFzqat1LSadE6KTdJCPtJqDXyXBej.webp">
+                                </div>
+                                <div class="card__title">Kick Cup</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/basket-fall-2">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Basket Fall 2" src="https://assets.vnvn.fun/images/kfkXTrEl3MirlGEa2uddwNapAgxVyvrH.webp">
+                                </div>
+                                <div class="card__title">Basket Fall 2</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/crazy-baskets">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Crazy Baskets" src="https://assets.vnvn.fun/images/dupytbDETxnHHxzHyGuIDBcfyGZxSk2b.webp">
+                                </div>
+                                <div class="card__title">Crazy Baskets</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/tennis-open-2021">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Tennis Open 2021" src="https://assets.vnvn.fun/images/y3WSAxNm6RyVhO8BjzaIDtKpv6sC1Z8A.webp">
+                                </div>
+                                <div class="card__title">Tennis Open 2021</div>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section__title"><div class="section__emoji">🤹</div><h2>Игры на ловкость</h2></div>
+                    <div class="section__body">
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/common-feature">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Common Feature" src="https://assets.vnvn.fun/images/Pn8u5teu4dTmqyjouZlmfghJjASIfygT.webp">
+                                </div>
+                                <div class="card__title">Common Feature</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/kingy-eternal-gems">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Kingy Eternal Gems" src="https://assets.vnvn.fun/images/7mVBDPJHMda2S9aach1e8Upn7lgb7awC.webp">
+                                </div>
+                                <div class="card__title">Kingy Eternal Gems</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/titan&#x27;s-tower">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Titan&#x27;s Tower" src="https://assets.vnvn.fun/images/0isFtyvbX3swIrWzs009TmbDzug6vujr.webp">
+                                </div>
+                                <div class="card__title">Titan&#x27;s Tower</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/bottle-flip-2">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Bottle Flip 2" src="https://assets.vnvn.fun/images/Fb2DxXGNblTJFYplTzRZsiypRCIdLXN6.webp">
+                                </div>
+                                <div class="card__title">Bottle Flip 2</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/non-stop-spinner">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Non-Stop Spinner" src="https://assets.vnvn.fun/images/gPZCv6lINzXbJrCqzHiVDla9CcfblRZl.webp">
+                                </div>
+                                <div class="card__title">Non-Stop Spinner</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/fidget-spinner-extreme">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Fidget Spinner Extreme" src="https://assets.vnvn.fun/images/c24rsVtXFCTQBxb9KKnvp8YSAhnRO0U8.webp">
+                                </div>
+                                <div class="card__title">Fidget Spinner Extreme</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/i-like-oj">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="I like OJ" src="https://assets.vnvn.fun/images/gLym7HMRb0L7yqsN8IH0tSdI6xZcqXpk.webp">
+                                </div>
+                                <div class="card__title">I like OJ</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/trump-run">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Trump Run" src="https://assets.vnvn.fun/images/045TAo1yEx0fnc2rE6IlrJpc5AW3VRIA.webp">
+                                </div>
+                                <div class="card__title">Trump Run</div>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section__title"><div class="section__emoji">3️⃣</div><h2>Подключение игр</h2></div>
+                    <div class="section__body">
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/match-candy-base">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Match Candy Base" src="https://assets.vnvn.fun/images/xjZOXKm2Rtt5zzJvPSOy2LIugrnn0Cgq.webp">
+                                </div>
+                                <div class="card__title">Match Candy Base</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/santa&#x27;s-gifty-night">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Santa&#x27;s Gifty Night" src="https://assets.vnvn.fun/images/RkC3am1wmA6U80ZaolAf2bnHysfcHFRZ.webp">
+                                </div>
+                                <div class="card__title">Santa&#x27;s Gifty Night</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/connect-the-zodiacs">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Connect the Zodiacs" src="https://assets.vnvn.fun/images/9loK5hwmdeShSpJBs5KiPgEvgL0l37wb.webp">
+                                </div>
+                                <div class="card__title">Connect the Zodiacs</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/christmas-swap">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Christmas Swap" src="https://assets.vnvn.fun/images/4RZzjPlENVRdBPIT5NO7lZBDtcsB4fCE.webp">
+                                </div>
+                                <div class="card__title">Christmas Swap</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/easter-egg-mania">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Easter Egg Mania" src="https://assets.vnvn.fun/images/cvldMRYFktrR7tHcQzRetJPIYQTcdzcy.webp">
+                                </div>
+                                <div class="card__title">Easter Egg Mania</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/galaxy-exploration">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Galaxy Exploration" src="https://assets.vnvn.fun/images/MqYOqlqkoeoJ0vn5eZEAQ6NbfVOFFDUE.webp">
+                                </div>
+                                <div class="card__title">Galaxy Exploration</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/ghostly-pop">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Ghostly Pop" src="https://assets.vnvn.fun/images/2DDTSd60u6VNZWLOhYXwK6fxXBAP9ZdN.webp">
+                                </div>
+                                <div class="card__title">Ghostly Pop</div>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="card" href="https://ru.vnvn.fun/igra/halloween-monster-match">
+                                <div class="card__img-wrapper">
+                                    <img class="card__img" alt="Halloween Monster Match" src="https://assets.vnvn.fun/images/3d0VojewhPLAxGzU7O25VVQSkEzNkUgo.webp">
+                                </div>
+                                <div class="card__title">Halloween Monster Match</div>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </main>
     </div>
 </div>
